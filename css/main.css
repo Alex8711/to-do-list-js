@@ -1,0 +1,50 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+/* colors for testing */
+h1 {
+  background-color: lightseagreen;
+}
+form {
+  background-color: lightsalmon;
+}
+.active {
+  background-color: lightslategray;
+}
+.completed {
+  background-color: lightgreen;
+}
+
+h1 {
+  grid-area: logo;
+}
+form {
+  grid-area: inputForm;
+}
+.active {
+  grid-area: active;
+}
+.completed {
+  grid-area: completed;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40px 50px auto;
+  grid-template-areas:
+    "logo logo"
+    "inputForm inputForm"
+    "active completed";
+}
+
+h1,
+form,
+.active,
+.completed {
+  justify-self: center;
+  align-self: center;
+}
